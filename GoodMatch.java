@@ -135,9 +135,5 @@ public class GoodMatch {
         }
     }
 
-    // String sentence = name1 + " matches " + name2;
-
-    // obj.percentage(obj.charOccurrenceInString(sentence));
-
 }
 }
