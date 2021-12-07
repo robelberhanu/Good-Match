@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.InvalidPathException;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -85,7 +87,7 @@ public class GoodMatchEM {
 
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         // Scanner scan = new Scanner(System.in);
 
         // Pattern p = Pattern.compile("^[a-zA-Z]*$"); // Compile the regex as we'll use it multiple times.
@@ -129,7 +131,6 @@ public class GoodMatchEM {
 
 
 
-    // String sentence = "";
     GoodMatchEM obj = new GoodMatchEM();
 
 
@@ -140,16 +141,9 @@ public class GoodMatchEM {
             System.out.println(sentence);
             String nstring = GoodMatchEM.reduceString(obj.charOccurrenceInString(sentence));
             obj.printResult(nstring, sentence);
-            // System.out.println(obj.reduceString(sentence));
 
         }
     }
-        
-        // obj = new GoodMatch();
-        
-        
-        // Print the result
-        
-        
+ 
     }
 }    
