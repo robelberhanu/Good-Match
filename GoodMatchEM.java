@@ -72,10 +72,10 @@ public class GoodMatchEM {
 	}
     public static void printResult(String result, String sentence){
         for (int i = 0; i < result.length() - 1; i++){
-            result = GoodMatch.reduceString(result);
+            result = GoodMatchEM.reduceString(result);
         }
         int benchmark = 80;
-        int percentage = Integer.parseInt(GoodMatch.reduceString(result));
+        int percentage = Integer.parseInt(GoodMatchEM.reduceString(result));
         if(percentage > benchmark){
             System.out.println(sentence + " " + percentage + "%, good match"); 
         }
@@ -130,7 +130,7 @@ public class GoodMatchEM {
 
 
     // String sentence = "";
-    GoodMatch obj = new GoodMatch();
+    GoodMatchEM obj = new GoodMatchEM();
 
 
     for(int i = 0; i < MalePlayers.size(); i++){
@@ -138,7 +138,7 @@ public class GoodMatchEM {
 
             String sentence = MalePlayers.get(i) + " matches " + FemalePlayers.get(j);
             System.out.println(sentence);
-            String nstring = GoodMatch.reduceString(obj.charOccurrenceInString(sentence));
+            String nstring = GoodMatchEM.reduceString(obj.charOccurrenceInString(sentence));
             obj.printResult(nstring, sentence);
             // System.out.println(obj.reduceString(sentence));
 
